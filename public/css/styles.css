@@ -1,0 +1,155 @@
+html {
+  font-size: 15px;
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+*:focus {
+  outline: 0;
+}
+body {
+  font-family: Roboto, Helvetica Neue, sans-serif !important;
+  background-color: #fff;
+}
+button.no-style {
+  background: none;
+  border: 0;
+  color: inherit;
+  font: inherit;
+  line-height: inherit;
+  overflow: ellipsis;
+  padding: 0;
+  border-radius: 0;
+  min-width: 0;
+  outline: 0;
+  cursor: pointer;
+}
+button:focus {
+  outline: 0;
+}
+#player {
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.75);
+  padding: 1rem;
+  color: #c2c2ca;
+}
+#player .middle-part {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+}
+#player .middle-part .progress,
+#player .middle-part .controls {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  background: transparent;
+  flex-direction: row;
+  align-items: center;
+}
+#player .middle-part .controls {
+  width: 15rem;
+  margin: 0 auto 0.5rem;
+}
+#player .middle-part .controls button {
+  width: 2rem;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+#player .middle-part .controls button.play {
+  width: 3rem;
+  height: 3rem;
+  line-height: 3rem;
+  font-size: 2rem;
+}
+#player .middle-part .controls button.loop.active,
+#player .middle-part .controls button.shuffle.active {
+  color: #00bcd4;
+}
+#player .middle-part .progress .bar {
+  background-color: #303030;
+  border-radius: 2px;
+  display: flex;
+  height: 4px;
+  width: 100%;
+  flex: 1 100%;
+  cursor: pointer;
+}
+#player .middle-part .progress .bar div {
+  border-radius: 2px;
+  height: 4px;
+  width: 50%;
+  background: #a0a0a0;
+}
+#player .middle-part .progress .progress-time {
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.015em;
+  min-width: 40px;
+  text-align: center;
+}
+#player .now-playing,
+#player .volume-bar {
+  display: flex;
+  width: 25%;
+}
+#player .now-playing {
+  justify-content: flex-start;
+  align-items: center;
+}
+#player .now-playing img {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+  margin-right: 1rem;
+}
+#player .now-playing .meta {
+  display: flex;
+  flex-direction: column;
+  flex: 1 100%;
+  margin-right: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#player .now-playing .meta .title {
+  color: #eee;
+  font-size: 0.95rem;
+}
+#player .now-playing .meta .artist-name {
+  font-size: 0.8rem;
+}
+#player .volume-bar {
+  justify-content: flex-end;
+  align-items: center;
+}
+#player .volume-bar button {
+  margin-right: 0.5rem;
+  width: 1rem;
+}
+#player .volume-bar button i {
+  float: left;
+}
+#player .volume-bar .fill {
+  background-color: #303030;
+  border-radius: 2px;
+  display: flex;
+  height: 4px;
+  width: 8rem;
+  cursor: pointer;
+}
+#player .volume-bar .fill div {
+  border-radius: 2px;
+  height: 4px;
+  width: 50%;
+  background: #a0a0a0;
+}
